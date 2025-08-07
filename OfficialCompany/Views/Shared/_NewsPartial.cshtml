@@ -1,0 +1,17 @@
+﻿
+@model IEnumerable<NewsViewModel>
+
+@foreach (var item in Model){
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+	<div class="member">
+		<div class="pic"><img src="~/images/team/team-1.jpg" class="img-fluid" alt=""></div>
+		<div class="member-info">
+			<h4>@item.NewsTitle</h4>
+			<span class="text-truncate">@item.NewsDesc</span>
+			<div class="social">
+					<span class="small"><i class="bi bi-filetype-docx"></i> @item.NewsGroupTitle</span>				
+			</div>
+		</div>
+	</div>
+</div>
+}

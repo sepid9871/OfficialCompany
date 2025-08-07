@@ -1,8 +1,331 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+	<img src="~/images/hero-bg-1.jpg" alt="" class="hero-bg">
+
+	<div class="container">
+		<div class="row gy-4 justify-content-between">
+			<div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
+				<img src="~/images/hero-img.png" class="img-fluid animated" alt="">
+			</div>
+
+			<div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
+				<h1>Where Art Comes Alive <span>OfficialCompany</span></h1>
+				<p>
+					We believe in the power of creativity to inspire, connect, and transform.
+					Explore our world of visual expression, where each piece tells a story and every design is a journey through imagination.
+				</p>
+				<div class="d-flex">
+					<a href="#about" class="btn-get-started">Get Started</a>					
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+		<defs>
+			<path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+		</defs>
+		<g class="wave1">
+			<use xlink:href="#wave-path" x="50" y="3"></use>
+		</g>
+		<g class="wave2">
+			<use xlink:href="#wave-path" x="50" y="0"></use>
+		</g>
+		<g class="wave3">
+			<use xlink:href="#wave-path" x="50" y="9"></use>
+		</g>
+	</svg>
+
+</section><!-- /Hero Section -->
+<!-- About Section -->
+<section id="about" class="about section">
+
+	<div class="container" data-aos="fade-up" data-aos-delay="100">
+		<div class="row align-items-xl-center gy-5">
+
+			<div class="col-xl-5 content">
+				<h3>About Us</h3>
+				<h2>
+					We collaborate with artists, collectors, and brands
+				</h2>
+				<p>
+					OfficialCompany is a creative studio passionate about art, design, and visual storytelling.<br />
+					Founded by artists and innovators, our mission is to bring ideas to life through stunning visuals and thoughtful design.<br />
+					Whether it’s digital illustration, traditional painting, or modern graphic design, we believe every form of art has the power to move hearts and minds.
+				</p>
+				<a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+			</div>
+
+			<div class="col-xl-7">
+				<div class="row gy-4 icon-boxes">
+
+					<div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+						<div class="icon-box">
+							<i class="bi bi-palette2"></i>
+							<h3>Lorem ipsum dolor</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+						</div>
+					</div> <!-- End Icon Box -->
+
+					<div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+						<div class="icon-box">
+							<i class="bi bi-palette"></i>
+							<h3>Lorem ipsum dolor</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+						</div>
+					</div> <!-- End Icon Box -->
+
+					<div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+						<div class="icon-box">
+							<i class="bi bi-paint-bucket"></i>
+							<h3>Lorem ipsum dolor</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+						</div>
+					</div> <!-- End Icon Box -->
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</section><!-- /About Section -->
+
+<!-- Features Section -->
+<section id="features" class="features section">
+
+	<div class="container">
+
+		<div class="row gy-4">
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+				<div class="features-item">
+					<i class="bi bi-eye" style="color: #ffbb2c;"></i>
+					<h3><a href="" class="stretched-link">Custom Illustrations</a></h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
+				<div class="features-item">
+					<i class="bi bi-infinity" style="color: #5578ff;"></i>
+					<h3>
+						<a href="" class="stretched-link">
+							Brand Identity Design
+						</a>
+					</h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
+				<div class="features-item">
+					<i class="bi bi-mortarboard" style="color: #e80368;"></i>
+					<h3><a href="" class="stretched-link">Art Prints & Posters</a></h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
+				<div class="features-item">
+					<i class="bi bi-nut" style="color: #e361ff;"></i>
+					<h3><a href="" class="stretched-link">Digital Exhibitions</a></h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
+				<div class="features-item">
+					<i class="bi bi-shuffle" style="color: #47aeff;"></i>
+					<h3><a href="" class="stretched-link">Abstract Collection</a></h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
+				<div class="features-item">
+					<i class="bi bi-star" style="color: #ffa76e;"></i>
+					<h3><a href="" class="stretched-link">Character Design</a></h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
+				<div class="features-item">
+					<i class="bi bi-x-diamond" style="color: #11dbcf;"></i>
+					<h3><a href="" class="stretched-link">Commissioned Portraits</a></h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
+				<div class="features-item">
+					<i class="bi bi-camera-video" style="color: #4233ff;"></i>
+					<h3><a href="" class="stretched-link">Motion Art & Animation</a></h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
+				<div class="features-item">
+					<i class="bi bi-command" style="color: #b2904f;"></i>
+					<h3><a href="" class="stretched-link">Concept Art Packs</a></h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
+				<div class="features-item">
+					<i class="bi bi-dribbble" style="color: #b20969;"></i>
+					<h3><a href="" class="stretched-link">Logo & Icon Design</a></h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
+				<div class="features-item">
+					<i class="bi bi-activity" style="color: #ff5828;"></i>
+					<h3><a href="" class="stretched-link">NFT & Blockchain Art</a></h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+			<div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
+				<div class="features-item">
+					<i class="bi bi-brightness-high" style="color: #29cc61;"></i>
+					<h3><a href="" class="stretched-link">Creative Workshops</a></h3>
+				</div>
+			</div><!-- End Feature Item -->
+
+		</div>
+
+	</div>
+
+</section><!-- /Features Section -->
+
+<!-- Details Section -->
+<section id="details" class="details section light-background">
+
+	<!-- Section Title -->
+	<div class="container section-title" data-aos="fade-up">
+		<h2>Details</h2>
+		<div><span>What We</span> <span class="description-title">Offer</span></div>
+	</div><!-- End Section Title -->
+
+	<div class="container">
+
+		<div class="row gy-4 align-items-center features-item">
+			<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+				<img src="~/images/details-1.png" class="img-fluid" alt="">
+			</div>
+			<div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+				<p class="fst-italic">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+					magna aliqua.
+				</p>
+				<ul>
+					<li><i class="bi bi-check"></i><span>Custom Artwork & Portraits</span></li>
+					<li><i class="bi bi-check"></i> <span>Visual Branding & Identity Design </span></li>
+					<li><i class="bi bi-check"></i> <span>Art for Interior Decor </span></li>
+					<li><i class="bi bi-check"></i> <span>Digital Art & NFT Design   </span></li>
+					<li><i class="bi bi-check"></i> <span>Creative Workshops & Events </span></li>
+				</ul>
+			</div>
+		</div><!-- Features Item -->		
+
+	</div>
+
+</section><!-- /Details Section -->
+
+<!-- News Section -->
+<section id="news" class="team section">
+
+	<!-- Section Title -->
+	<div class="container section-title" data-aos="fade-up">
+		<h2>NEWS</h2>
+		<div><span>Check Our</span> <span class="description-title">Last News</span></div>
+	</div><!-- End Section Title -->
+
+	<div class="container">
+
+		<div class="row gy-5">
+
+			<div id="news-container" data-loaded="false"></div>
+		</div>
+
+	</div>
+
+</section><!-- /News Section -->
+
+<!-- Contact Section -->
+<section id="contact" class="contact section light-background">
+
+	<!-- Section Title -->
+	<div class="container section-title" data-aos="fade-up">
+		<h2>Contact</h2>
+		<div><span>Check Our</span> <span class="description-title">Contact</span></div>
+	</div><!-- End Section Title -->
+
+	<div class="container" data-aos="fade" data-aos-delay="100">
+
+		<div class="row gy-4">
+
+			<div class="col-lg-4">
+				<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+					<i class="bi bi-geo-alt flex-shrink-0"></i>
+					<div>
+						<h3>Address</h3>
+						<p>1 Test Street ,Ontario, Canada</p>
+					</div>
+				</div><!-- End Info Item -->
+
+				<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+					<i class="bi bi-telephone flex-shrink-0"></i>
+					<div>
+						<h3>Call Us</h3>
+						<p>+1 (919) 554 5555</p>
+					</div>
+				</div><!-- End Info Item -->
+
+				<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+					<i class="bi bi-envelope flex-shrink-0"></i>
+					<div>
+						<h3>Email Us</h3>
+						<p>info@test.com</p>
+					</div>
+				</div><!-- End Info Item -->
+
+			</div>
+
+			<div class="col-lg-8">
+				<form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+					<div class="row gy-4">
+
+						<div class="col-md-6">
+							<input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+						</div>
+
+						<div class="col-md-6 ">
+							<input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+						</div>
+
+						<div class="col-md-12">
+							<input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+						</div>
+
+						<div class="col-md-12">
+							<textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+						</div>
+
+						<div class="col-md-12 text-center">
+							<div class="loading">Loading</div>
+							<div class="error-message"></div>
+							<div class="sent-message">Your message has been sent. Thank you!</div>
+
+							<button type="submit">Send Message</button>
+						</div>
+
+					</div>
+				</form>
+			</div><!-- End Contact Form -->
+
+		</div>
+
+	</div>
+
+</section><!-- /Contact Section -->

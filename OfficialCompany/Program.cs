@@ -1,7 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using OfficialCompany.Core.Services;
+using OfficialCompany.Core.Services.Interfaces;
+using OfficialCompany.DataLayer.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+builder.Services.AddDbContext<OfficialWebsiteContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("OfficialConString"));
+});
+
+builder.Services.AddTransient<INewsService, NewsService>();
 
 var app = builder.Build();
 
