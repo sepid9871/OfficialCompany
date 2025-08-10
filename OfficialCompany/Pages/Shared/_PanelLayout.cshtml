@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+
+	
+	<link href="~/css/main.css" rel="stylesheet" />
+	<link href="~/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+	<link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+	<header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">
+			<h3 class="sitename"><b class="text-info">O</b>fficialC<b class="text-info">o</b>mpany</h3>
+		</a>
+	</header>
+
+	<div class="container-fluid">
+		<div class="row min-vh-100">
+			<!-- Sidebar -->
+			<div class="sidebar col-md-3 col-lg-2 p-0 bg-body-tertiary d-flex flex-column shadow border-end">
+				<div class="offcanvas-md offcanvas-end bg-body-tertiary d-md-flex flex-column w-100" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+					<div class="flex-shrink-0 p-3">
+						<a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+							<span class="fs-7 fw-semibold"><i class="bi bi-person-badge h2 me-4"></i>Hi, Admin</span>
+						</a>
+						<ul class="list-unstyled ps-0">
+							<li class="mb-1">
+								<button class="btn btn-toggle text-primary fw-bold d-inline-flex align-items-center rounded border-0 w-100" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+									Users
+								</button>
+								<div class="collapse" id="home-collapse">
+									<ul>
+										<li class="pb-2"><a href="/Admin/UserPart/index" class="link-body-emphasis d-inline-flex text-decoration-none rounded">User List</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="border-top my-3"></li>
+							<li class="mb-1">
+								<button class="btn btn-toggle d-inline-flex text-primary fw-bold align-items-center rounded border-0 w-100 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+									News Group
+								</button>
+								<div class="collapse" id="dashboard-collapse">
+									<ul>
+										<li class="pb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">News Group List</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="mb-1">
+								<button class="btn btn-toggle d-inline-flex text-primary fw-bold align-items-center rounded border-0 w-100 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+									News
+								</button>
+								<div class="collapse" id="dashboard-collapse">
+									<ul>
+										<li class="pb-2"><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">News List</a></li>
+									</ul>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main Content Area -->
+			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 d-flex flex-column bg-body">
+				<div class="flex-grow-1 pt-3 pb-2 mb-3 border-bottom">
+					@RenderBody()
+				</div>
+				<footer class="mt-auto py-3 border-top">
+					<div class="text-center">© 2025 OfficialCompany</div>
+				</footer>
+			</main>
+		</div>
+	</div>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	@* <script src="~/js/sidebarmenu.js"></script>
+	<script src="~/js/app.min.js"></script>
+	<script src="~/js/dashboard.js"></script> *@
+</body>
+</html>

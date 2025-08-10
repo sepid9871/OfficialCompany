@@ -1,0 +1,38 @@
+﻿@page
+@model OfficialCompany.Pages.Admin.UserPart.CreateModel
+@{
+}
+<div class="container-fluid ">
+	<div class="card">
+		<div class="card-body">
+			<h5 class="card-title fw-semibold mb-5">Create User</h5>
+
+			<form method="post" class="row g-3">
+
+				<div class="col-6">
+					<label for="nm">FullName</label>
+					<input type="text" class="form-control" asp-for="userModel.FullName" id="nm" placeholder="FullName">
+					<span asp-validation-for="userModel.FullName" class="text-danger small"></span>
+				</div>
+				<div class="col-6">
+					<label for="usr">Username</label>
+					<input type="text" class="form-control" asp-for="userModel.Username" id="usr" placeholder="Username">
+					<span asp-validation-for="userModel.Username" class="text-danger small"></span>
+				</div>
+				<div class="col-6">
+					<label for="psw">Password</label>
+					<input type="password" class="form-control" asp-for="userModel.Password" id="psw" placeholder="Password">
+					<span asp-validation-for="userModel.Password" class="text-danger small"></span>
+				</div>
+				<div class="col-6 form-check align-content-center pt-3">
+					<label class="form-check-label" for="switchCheckChecked">Is Active</label>
+					<input class="form-check-input" type="checkbox" id="switchCheckChecked" checked />
+				</div>
+				<div class="col-3">
+					<button type="submit" class="btn btn-primary ">Add User</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>

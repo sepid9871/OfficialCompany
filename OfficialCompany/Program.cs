@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OfficialCompany.Core.Services;
 using OfficialCompany.Core.Services.Interfaces;
 using OfficialCompany.DataLayer.Context;
+using OfficialCompany.DataLayer.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,10 @@ builder.Services.AddDbContext<OfficialWebsiteContext>(options =>
 });
 
 builder.Services.AddTransient<INewsService, NewsService>();
+builder.Services.AddTransient<IUserService, UserService>();
+
+builder.Services.AddIdentity<AspUser,AspRole>().AddEntityFrameworkStores<OfficialWebsiteContext>().AddDefaultTokenProviders();
+builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
@@ -34,5 +40,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapRazorPages();
 
 app.Run();

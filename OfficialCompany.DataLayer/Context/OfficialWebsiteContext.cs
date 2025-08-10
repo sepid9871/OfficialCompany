@@ -17,8 +17,8 @@ public partial class OfficialWebsiteContext : IdentityDbContext<AspUser,AspRole,
         : base(options)
     {
     }
-
-    public virtual DbSet<News> News { get; set; }
+    public virtual DbSet<AspClaim> AspClaim { get; set; }	
+	public virtual DbSet<News> News { get; set; }
 
     public virtual DbSet<NewsGroup> NewsGroups { get; set; }
 
@@ -27,8 +27,14 @@ public partial class OfficialWebsiteContext : IdentityDbContext<AspUser,AspRole,
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-		
+		modelBuilder.Entity<AspClaim>(entity =>
+		{
+            entity.Property(e => e.ClaimId).HasColumnName("ClaimId");
+            entity.HasKey(e => e.ClaimId);
+			
+		});
 
+		
 		modelBuilder.Entity<News>(entity =>
         {
             entity.Property(e => e.NewsDesc).IsUnicode(false);

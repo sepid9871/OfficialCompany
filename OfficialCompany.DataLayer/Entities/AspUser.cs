@@ -10,8 +10,8 @@ namespace OfficialCompany.DataLayer.Entities
 {
 	public class AspUser:IdentityUser<int>
 	{
-		public string FullName { get; set; } = string.Empty;
-		public string ActivationCode { get; set; } = string.Empty;
+		public string FullName { get; set; }
+		public string ActivationCode { get; set; }
 		public bool IsActive { get; set; } = false;
 		public DateTime RegDate { get; set; }
 	}
