@@ -13,5 +13,6 @@ namespace OfficialCompany.Core.Services.Interfaces
 	{
 		UserForAdminViewModel GetUsers(short pageId=1,string filterUsername="");
 		Task<IdentityResult> CreateUserAsync(CreateUsersViewModel model);
+		List<AspRole> GetRoles();
 	}
 }

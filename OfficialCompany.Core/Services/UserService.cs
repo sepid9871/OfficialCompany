@@ -17,11 +17,13 @@ namespace OfficialCompany.Core.Services
 	{
 		private readonly OfficialWebsiteContext _db;
 		private readonly UserManager<AspUser> _manager;
+		private readonly RoleManager<AspRole> _rmanager;
 
-		public UserService(OfficialWebsiteContext db, UserManager<AspUser> manager)
+		public UserService(OfficialWebsiteContext db, UserManager<AspUser> manager, RoleManager<AspRole> rmanager)
 		{
 			_db = db;
 			_manager = manager;			
+			_rmanager = rmanager;
 		}
 		public UserForAdminViewModel GetUsers(short pageId = 1, string filterUsername = "")
 		{
@@ -80,18 +82,24 @@ namespace OfficialCompany.Core.Services
 			var result = await _manager.CreateAsync(identifyUser, model.Password);
 			if (!result.Succeeded) return result;
 
-			
-			//if (model.Roles is { Count: > 0 })
+			if (model.RoleId > 0)
+			{
+				var role = await _rmanager.FindByIdAsync(model.RoleId.ToString());
+				var addRes = await _manager.AddToRoleAsync(identifyUser,role?.Name!);				
+			}
+				
+			//if (model.role is { Count: > 0 })
 			//{
-			//	var addRoles = await _manager.AddToRolesAsync(user, model.Roles);
+			//	var addRoles = await _manager.AddToRolesAsync(identifyUser, model.RoleId);
 			//	if (!addRoles.Succeeded) return addRoles;
-			//}	
+			//}
 
 			return IdentityResult.Success;
-
-
 		}
 
-		
+		public List<AspRole> GetRoles()
+		{
+			return _db.Roles.OrderBy(x=>x.Name).ToList();
+		}
 	}
 }

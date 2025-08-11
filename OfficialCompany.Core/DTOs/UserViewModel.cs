@@ -58,6 +58,9 @@ namespace OfficialCompany.Core.DTOs
 		//public string Cellphone { get; set; }
 
 		public bool IsActive { get; set; }
+		[Display(Name = "User's Role")]
+		[Required(ErrorMessage = "Please Select {0}")]
+		public int RoleId { get; set; }
 
 	}
 	public class CheckBoxViewModel
@@ -74,13 +77,10 @@ namespace OfficialCompany.Core.DTOs
 	}
 	public class RolesViewModel
 	{
-		public string Id { get; set; }
+		public int Id { get; set; }
 		[Display(Name = "Group Title")]
 		[Required(ErrorMessage = "Please Enter {0}")]
-		public string RoleName { get; set; }
-		[Display(Name = "Desc")]
-		[Required(ErrorMessage = "Please Enter {0}")]
-		public string Description { get; set; }
+		public string RoleName { get; set; }		
 	}
 	public class EditGroupsViewModel
 	{

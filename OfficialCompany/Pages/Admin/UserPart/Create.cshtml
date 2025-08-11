@@ -1,37 +1,64 @@
 ﻿@page
 @model OfficialCompany.Pages.Admin.UserPart.CreateModel
 @{
+	List<AspRole> roles = ViewData["Roles"] as List<AspRole>;
+	
 }
 <div class="container-fluid ">
 	<div class="card">
 		<div class="card-body">
 			<h5 class="card-title fw-semibold mb-5">Create User</h5>
+			<form method="post" class="row g-3" enctype="multipart/form-data">
+				<div class="col-md-8 row">
+					<div class="col-6">
+						<label class="form-label" for="nm">FullName</label>
+						<input type="text" class="form-control" asp-for="userModel.FullName" id="nm" placeholder="FullName">
+						<span asp-validation-for="userModel.FullName" class="text-danger small"></span>
+					</div>
+					<div class="col-6">
+						<label class="form-label" for="usr">Username</label>
+						<input type="text" class="form-control" asp-for="userModel.Username" id="usr" placeholder="Username">
+						<span asp-validation-for="userModel.Username" class="text-danger small"></span>
+					</div>
+					<div class="col-6">
+						<label class="form-label" for="psw">Password</label>
+						<input type="password" class="form-control" asp-for="userModel.Password" id="psw" placeholder="Password">
+						<span asp-validation-for="userModel.Password" class="text-danger small"></span>
+					</div>
+					<div class="col-6 form-check align-content-center pt-3">
+						<label class="form-check-label" for="switchCheckChecked">Is Active</label>
+						<input class="form-check-input" type="checkbox" id="switchCheckChecked" checked />
+					</div>
 
-			<form method="post" class="row g-3">
+				</div>
+				<div class="vr d-none d-md-block"></div>
+				<div class="col-md-4">
+					<h4>Roles</h4>
+					<hr />
+					<div class="row g-3">
 
-				<div class="col-6">
-					<label for="nm">FullName</label>
-					<input type="text" class="form-control" asp-for="userModel.FullName" id="nm" placeholder="FullName">
-					<span asp-validation-for="userModel.FullName" class="text-danger small"></span>
+						<div class="form-floating">
+							@if (roles != null)
+							{
+								
+								@foreach (var item in roles)
+								{
+									<div class="list-group">
+										<label class="list-group-item border-0">
+											<input type="radio" class="form-check-input me-2 ms-1" name="roleList"  value="@item.Id"  checked /> @item.Name
+										</label>
+									</div>									
+								}
+							//<span asp-validation-for="userModel.RoleId" class="text-danger small"></span>
+							}
+							
+						</div>
+					</div>
 				</div>
 				<div class="col-6">
-					<label for="usr">Username</label>
-					<input type="text" class="form-control" asp-for="userModel.Username" id="usr" placeholder="Username">
-					<span asp-validation-for="userModel.Username" class="text-danger small"></span>
+					<button type="submit" class="btn btn-primary btn-sm">Add User</button>
+					<a asp-page="Index" button class="btn btn-dark btn-sm">Cancel</a>
 				</div>
-				<div class="col-6">
-					<label for="psw">Password</label>
-					<input type="password" class="form-control" asp-for="userModel.Password" id="psw" placeholder="Password">
-					<span asp-validation-for="userModel.Password" class="text-danger small"></span>
-				</div>
-				<div class="col-6 form-check align-content-center pt-3">
-					<label class="form-check-label" for="switchCheckChecked">Is Active</label>
-					<input class="form-check-input" type="checkbox" id="switchCheckChecked" checked />
-				</div>
-				<div class="col-3">
-					<button type="submit" class="btn btn-primary ">Add User</button>
-				</div>
-
 			</form>
 		</div>
 	</div>
